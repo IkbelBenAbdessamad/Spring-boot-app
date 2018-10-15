@@ -8,18 +8,21 @@ import javax.persistence.Table;
  *
  */
 @Entity
-@Table(name="company_revenue",schema="springbootecomdash")
+@Table(name="company_Revenue",schema="springbootapp")
 
 public class CompanyRevenue extends KeyEntity {
    
-	@Column(name="Revenue Month",nullable=false)
+	@Column(name="revenueMonth",nullable=false)
 	private String month;
-	@Column(name="Revenue",nullable=false)
+	@Column(name="revenue",nullable=false)
 	private double revenue;
 	@Column(name="expense",nullable=false)
 	private  double expense;
 	@Column(name="margin",nullable=false)
 	private double margin;
+	
+	
+	
 	public String getMonth() {
 		return month;
 	}

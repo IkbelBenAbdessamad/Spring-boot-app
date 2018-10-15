@@ -1,10 +1,20 @@
 package com.ikbel.Entity;
 
-public class OrderCollectionStatus {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+@Entity
+@Table(name="OrderCollectionStatus",schema="springbootapp")
+public class OrderCollectionStatus extends KeyEntity{
+	@Column(name="New_Order",nullable=false)
 	private int newOrder;
+	@Column(name="Revenue",nullable=false)
 	private double revenue;
+	@Column(name="Shipped",nullable=false)
 	private int shipped;
+	@Column(name="Returned",nullable=false)
 	private int returned;
+    
 	public int getNewOrder() {
 		return newOrder;
 	}

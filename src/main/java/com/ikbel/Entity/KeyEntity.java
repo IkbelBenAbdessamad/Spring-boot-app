@@ -9,7 +9,6 @@ public class KeyEntity {
 	@Id
 	@Column(name = "pk", unique = true)
 	private String pk;
-
 	public String getPk() {
 		return pk;
 	}

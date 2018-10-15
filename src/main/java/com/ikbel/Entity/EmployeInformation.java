@@ -2,12 +2,24 @@ package com.ikbel.Entity;
 
 import java.util.Date;
 
-public class EmployeInformation {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Employ_Informations",schema="springbootapp")
+public class EmployeInformation  extends KeyEntity{
+    @Column(name="name",nullable=false)
 	private String name;
-	private String  postion;
+    @Column(name="postion",nullable=false)
+    private String  postion;
+    @Column(name="Office_Location",nullable=false)
 	private String officeLocation;
+    @Column(name="age",nullable=false)
 	private  int age;
+    @Column(name="Start_Date",nullable=false)
 	private Date startDate;
+    @Column(name="Salary",nullable=false)
 	private double salary;
 	public String getName() {
 		return name;

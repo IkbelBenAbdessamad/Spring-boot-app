@@ -1,7 +1,15 @@
 package com.ikbel.Entity;
 
-public class OrderRecived {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Order_Recived",schema="springbootapp")
+public class OrderRecived extends KeyEntity{
+@Column(name="Order_Recived",nullable=false)
 private int  orderReived;
+@Column(name="Date_Recived",nullable=false)
 private  String dateRecieved;
 
 
