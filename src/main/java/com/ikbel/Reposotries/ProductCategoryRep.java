@@ -11,5 +11,4 @@ import com.ikbel.Entity.ProductCategory;
 @Qualifier(value="ProductCategoryRep")
 public interface ProductCategoryRep  extends JpaRepository<ProductCategory, String>{
 List<ProductCategory> FindByBestCatgory(boolean BestCatgory);
-	
 }

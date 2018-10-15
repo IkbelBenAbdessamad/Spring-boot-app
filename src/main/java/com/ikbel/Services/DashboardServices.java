@@ -9,12 +9,19 @@ import com.ikbel.Entity.OrderRecived;
 import com.ikbel.Entity.ProductCategory;
 
 public interface DashboardServices {
-List<CompanyRevenue> getTodayRevenueDash();
-List<OrderRecived> getAllOrderRecived();
-List<EmployeInformation> getAllEmploy();
-List<OrderCollectionStatus> getOrderCollection();
-List<ProductCategory> getBestCategory();
-void addEmploy(EmployeInformation employeInformation);
-EmployeInformation updateEmploy(EmployeInformation employeInformation);
-void deleteEmploye(EmployeInformation employeInformation);
+	List<CompanyRevenue> getTodayRevenueDash();
+
+	List<OrderRecived> getAllOrderRecived();
+
+	List<EmployeInformation> getAllEmployee();
+
+	List<OrderCollectionStatus> getOrderCollection();
+
+	List<ProductCategory> getBestCategory();
+
+	void addEmploy(EmployeInformation employeInformation);
+
+	EmployeInformation updateEmploy(EmployeInformation employeInformation);
+
+	void deleteEmploye(EmployeInformation employeInformation);
 }

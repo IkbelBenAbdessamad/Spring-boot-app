@@ -3,6 +3,7 @@ package com.ikbel.Services.Imp;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import com.ikbel.Entity.CompanyRevenue;
 import com.ikbel.Entity.EmployeInformation;
@@ -15,6 +16,8 @@ import com.ikbel.Reposotries.OrderCollectionStatusRep;
 import com.ikbel.Reposotries.OrderRecivedRep;
 import com.ikbel.Reposotries.ProductCategoryRep;
 import com.ikbel.Services.DashboardServices;
+
+@Component
 public class DashboardServicesImpl implements DashboardServices {
 
 	@Autowired
@@ -27,6 +30,10 @@ public class DashboardServicesImpl implements DashboardServices {
 	private OrderRecivedRep OrderRecivedRep;
 	@Autowired
 	private ProductCategoryRep ProductCategoryRep;
+	
+	
+	
+	
 	@Override
 	public List<CompanyRevenue> getTodayRevenueDash() {
 		return companyRevenueRep.findAll();
@@ -36,7 +43,7 @@ public class DashboardServicesImpl implements DashboardServices {
 		return OrderRecivedRep.findAll();
 	}
 	@Override
-	public List<EmployeInformation> getAllEmploy() {
+	public List<EmployeInformation> getAllEmployee() {
 		return EmployInformationRep.findAll();
 	}
 	@Override
@@ -45,7 +52,6 @@ public class DashboardServicesImpl implements DashboardServices {
 	}
 	@Override
 	public List<ProductCategory> getBestCategory() {
-
 		return ProductCategoryRep.FindByBestCatgory(true);
 	}
 	@Override
